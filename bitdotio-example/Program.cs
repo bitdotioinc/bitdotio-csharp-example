@@ -13,7 +13,7 @@ namespace bitdotio_example
             //var bitUser = "<your username>";
             //var bitDbName = "<your repo name>";
 
-            var bitApiKey = "<your API key here"";
+            var bitApiKey = "<your API key here";
 
             // For this example, look at the sensor data from a public repo.
             var bitUser = "adam";
