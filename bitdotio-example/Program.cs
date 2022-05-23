@@ -9,22 +9,18 @@ namespace bitdotio_example
         static void Main(string[] args)
         {
             var bitHost = "db.bit.io";
+            var bitApiKey = "<bit.io key>"; // from the "Password" field of the "Connect" menu
 
-            //var bitUser = "<your username>";
-            //var bitDbName = "<your repo name>";
-
-            var bitApiKey = "<your API key here";
-
-            // For this example, look at the sensor data from a public repo.
-            var bitUser = "adam";
-            var bitDbName = "sensors";
+            // For this example, look at the public 2020 census reapportionment data
+            var bitUser = "<bit.io username>";
+            var bitDbName = "dliden/2020_Census_Reapportionment";
 
             var cs = $"Host={bitHost};Username={bitUser};Password={bitApiKey};Database={bitDbName}";
 
             using var con = new NpgsqlConnection(cs);
             con.Open();
 
-            var sql = "SELECT * FROM \"adam/sensors\".\"measurements\" order by datetime desc;";
+            var sql = "SELECT * FROM \"dliden/2020_Census_Reapportionment\".\"Historical Apportionment\" limit 10;";
 
             using var cmd = new NpgsqlCommand(sql, con);
 
