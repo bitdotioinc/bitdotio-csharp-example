@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6</TargetFramework>
     <RootNamespace>bitdotio_example</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Npgsql" Version="5.0.7" />
+    <PackageReference Include="Npgsql" Version="6" />
   </ItemGroup>
 
 </Project>
